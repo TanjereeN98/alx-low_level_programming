@@ -1,6 +1,7 @@
 #include<stdio.h>
 /*
- * main function is the entry point to the puts function program
+ * main -  a program that prints using puts function
+ * Return: 0 (Success)
  */
 int main(void)
 {	char str_1[] = "\"Programming is like building a multilingual puzzle";
