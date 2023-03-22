@@ -25,8 +25,8 @@ void times_table(void)
 			z = (i * y) / 10;
 			if (i * y > 9)
 			{
-				_putchar('0' + 'z');
-				_putchar('0' + 'x');
+				_putchar('0' + z);
+				_putchar('0' + x);
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
