@@ -7,6 +7,8 @@
 
 int main(void)
 {
+	int i;
+	
 	for (i = 1 ; i <= 100 ; i++)
 		if (i == 100)
 			printf("FizzBuzz\n");
@@ -18,4 +20,5 @@ int main(void)
 			printf("Fizz ");
 		else
 			printf("%d ", i);
+	return (0);
 }
