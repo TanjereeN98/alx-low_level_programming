@@ -7,11 +7,11 @@
 
 void puts2(char *str)
 {
-	int i;
+	int len = 0, i = 0;
 
-	while (str[i])
-		i++;
-	for (; i > 0 ; i--)
+	while (str[len])
+		len++;
+	for (i = 0; len > i ; i++)
 	{
 		if (str[i] % 2 != 0)
 			continue;
