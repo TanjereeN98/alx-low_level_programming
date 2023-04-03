@@ -18,10 +18,8 @@ char *_strpbrk(char *s, char *accept)
 			if (*(s + i) == *(accept + j))
 			{
 				len = i;
-				break;
+				return (s + len);
 			}
-		if (*(s + i) == *(accept + j))
-			break;
 	}
-	return (s + len);
+	return (0);
 }
