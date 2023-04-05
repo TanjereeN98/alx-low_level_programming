@@ -7,7 +7,6 @@
  *
  * Return: returns the number square root of -1 if it doesn't have one
  */
-
 int calculate_square(int n, int guess)
 {
 	if (guess * guess == n)
@@ -17,6 +16,12 @@ int calculate_square(int n, int guess)
 	else
 		return (calculate_square(n, guess + 1));
 }
+
+/**
+ * _sqrt_recursion - function to find the square root
+ * @n: input number
+ * Return: the square root
+ */
 
 int _sqrt_recursion(int n)
 {
