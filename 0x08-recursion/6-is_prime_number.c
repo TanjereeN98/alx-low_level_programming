@@ -28,7 +28,7 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	testing_prime(n, n - 1);
+	return (testing_prime(n, n - 1));
 	return ('\n');
 }
 
