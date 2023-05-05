@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- *  - function
- *
- *
+ * print_binary - a function that prints the binary representation
+ * @n: the number to be converted
  */
-int get_bit(unsigned long int n, unsigned int index)
+void print_binary(unsigned long int n)
 {
-
+	if (n > 1)
+		print_binary(n >> 1);
+	_putchar((n & 1) + '0');
+}
