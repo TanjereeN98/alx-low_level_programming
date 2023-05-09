@@ -8,7 +8,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *ptr;
-	size_t descript, red;
+	signed long int descript, red;
 
 	descript = open(filename, O_RDONLY);
 	if (descript == -1)
