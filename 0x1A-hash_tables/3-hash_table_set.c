@@ -10,11 +10,11 @@ hash_node_t *create_node(const char *key, const char *value);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node, *curr_node;
-	int index;
+	int idx;
 
 	if (!ht || !key || *key == '\0' || !value)
 		return (0);
-	index = key_index((const unsigned char *)key, ht->size);
+	idx = key_index((const unsigned char *)key, ht->size);
 	if (ht->array[idx] == NULL)
 	{
 		node = create_node(key, value);
