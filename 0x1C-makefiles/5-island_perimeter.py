@@ -1,19 +1,35 @@
 #!/usr/bin/python3
-"""returns the perimeter of the island described in grid"""
+"""
+Island perimeter
+"""
 
 
 def island_perimeter(grid):
-    """returns the perimeter of the island described in grid"""
-    per = 0
-    for i in range(len(grid)):
-        for j in range(len(grid[0])):
-            if grid[i][j] == 1:
-                if grid[i - 1][j] == 0:
-                    per += 1
-                if grid[i][j + 1] == 0:
-                    per += 1
-                if grid[i + 1][j] == 0:
-                    per += 1
-                if grid[i][j - 1] == 0:
-                    per += 1
-    return per
+    """
+    Returns the perimeter of the island described in grid.
+    """
+    perimeter = 0
+    for row in range(len(grid)):
+        for col in range(len(grid[0])):
+            if grid[row][col] == 1:
+                try:
+                    if grid[row - 1][col] == 0:
+                        perimeter += 1
+                except IndexError:
+                    perimeter += 1
+                try:
+                    if grid[row + 1][col] == 0:
+                        perimeter += 1
+                except IndexError:
+                    perimeter += 1
+                try:
+                    if grid[row][col - 1] == 0:
+                        perimeter += 1
+                except IndexError:
+                    perimeter += 1
+                try:
+                    if grid[row][col + 1] == 0:
+                        perimeter += 1
+                except IndexError:
+                    perimeter += 1
+    return perimeter
